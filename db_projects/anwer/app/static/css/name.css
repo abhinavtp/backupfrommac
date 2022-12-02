@@ -1,0 +1,48 @@
+h1,h2,h3{
+    color: chartreuse;
+}
+
+#v1{
+    color: cyan;
+}
+
+.v2{
+    color: blue;
+}
+
+*{
+    background-color: rgba(29, 204, 22, 0.956);
+}
+
+p span{
+    color: cadetblue;
+}
+.v3{
+    color: aliceblue;
+}
+ input[type="text"]{
+    color: brown;
+ }
+
+ a[class="v5"]{
+    color: yellow;
+    background-color: green;
+
+ }
+ h6[align="center"]{
+    color: cadetblue;
+ }
+ span{ color: aquamarine;
+    background-color: bisque;
+ }
+ div{
+    color: rgba(165, 138, 42, 0.629);
+    background-color: rgb(226, 32, 90);
+ }
+ div span{
+    color:inherit;
+    background-color: inherit;
+    font-size: 30px;
+ }
+ 
+ 

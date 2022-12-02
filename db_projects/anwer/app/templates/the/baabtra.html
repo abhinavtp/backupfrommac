@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="height: 50px;   background-color: #007EE5;" width="100px">
+        <img src="{% static 'images/pic.PNG' %}" width="200px" height="50px" alt="" style="padding-bottom: 9px; padding-left: 180px;">
+        <img src="{% static 'images/pic1.PNG' %}" width="180px" style="padding-right: 180px;" align="right">
+    </div>
+    <div>
+        <a href="{% url 'ho' %}"><img src="{% static 'images/pic3.PNG' %}" alt="" width="200px" style="padding-left: 180px;"></a>
+        <div style="float: right; width: 900px; height: 80px;">
+            <form action="" style="padding-top:27px ; padding-left: 20px;">
+                <select name="" id="">
+                    <option value="abc ">INTERNSHIP PRIGRAMS</option>
+                    <option value="abc"> PLACEMENTS</option>
+                    <option value="abc"> ABOUT US</option>
+                    <option value="abc"> BLOG</option>
+                    <option value="abc"> LOGIN</option>
+                </select>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="{% url 'pl' %}"> PLACEMENTS</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="{% url 'ab' %}"> ABOUT US</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <a href="{% url 'bl' %}"> BLOG</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+                           <a href="{% url 'lo' %}"></a> LOGIN</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <button type="button"> enquire now</button>
+
+
+            </form>
+        </div>
+        {% block content %}
+        <div style="background-color: cornflowerblue;">
+
+        <center> <img src="{% static 'images/pic2.PNG' %}" alt="" width="300px" style="padding-top: 30px;" ></center>
+        <center>
+            <h3>we are affiliated with aray education londan,uk.</h3>
+        </center>
+        <center>
+            <div style="  background-color:#224c70; width: 700px; height:150px;">
+
+                <h2 style="color: aliceblue;">GETTING A SOFTWARE JOB IS SO EASY WITH OUR
+                    <br>INTERNSHIP
+                    PROGRAM <br>
+                    <label for="" style="color: rgb(4, 5, 22); font-size:15px; "> Learn programming from the most
+                        trusted software training company in Calicut with highest <br> placement
+                        record. Enroll for software courses and internship programs in Python,PHP, Angular or flutter
+                        <br> to start your career. <br>
+                    </label>
+            </div>
+            
+        </center>
+        </div>
+        <br><br><br><br><br>
+        <div style=" padding-left: 150px; "> &nbsp;&nbsp;
+            <img src="{% static 'images/pythontraing.PNG' %}" alt="" style="width: 200px;"> &nbsp;&nbsp;
+            <img src="{% static 'images/php.PNG' %}" alt="" style="width: 210px;">&nbsp;&nbsp;
+            <img src="{% static 'images/angular.PNG' %}" alt="" style="width: 200px;">&nbsp;&nbsp;
+            <img src="{% static 'images/flutter.PNG' %}" alt="" style="width: 200px;">&nbsp;&nbsp;
+            <img src="{% static 'images/web.PNG' %}" alt="" style="width: 200px;">&nbsp;&nbsp;
+        </div>
+        <h1 style="padding-left: 150px;">Explore Our internship programme</h1>
+        <h4 style="padding-left: 150px;" >baabtra.com offers you courses and training programs that will enable you to master programming in depth. Enroll and start learning with the experts in the <br> industry. We offer PHP Training with Laravel Framework, Python Training with Django Framework, Angular Training and Node.js Training.</h4>
+        <div>
+            <br>
+            <br>
+            <br>
+            
+        <img src="{% static 'images/student.PNG' %} " style="width: 700px;" >
+        <img src="{% static 'images/student2.PNG' %}" style="width: 700px;">
+        </div>
+        <br><br><br>
+        <div  >
+            <h1 style="font-size: 40px; padding-left: 150px;"  >Placed Candidates</h1>
+            <img src="{% static 'images/sphoto.PNG' %}" style="width: 1200px; padding-left: 135px; "  alt="">
+        </div>
+
+        {% endblock %}
+</body>
+
+</html>

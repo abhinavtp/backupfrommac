@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <form method="post"  enctype="multipart/form-data">
+        {% csrf_token %} 
+       <label for="">name </label> <input type="text" name="name" ><br><br>
+       <label for="">email</label> <input type="email" onchange="checkemailexist()"  id="email" name="email" ><br><br>
+       <b style="color: red;" id="b1"></b>
+       <label for="">phone</label> <input type="number" name="phone" ><br><br>
+       <label for="">password</label>  <input type="password" name="password" ><br><br>
+       <label for="">confirm password</label><input type="text" name="confirm password"><br><br>
+       <label for="">photo</label>  <input type="file" name="photo" ><br><br>
+       <input type="submit" id="btn">
+       <br><br>
+       <a href="{% url 'd' %}"><button type="button">show database</button></a>
+
+       <script>
+
+        function checkemailexist(){
+            // console.log('function called')
+            // console.log($('#email').val())
+            $.ajax({
+                url: 'emailcheck',
+                type: 'POST',
+                data: {
+                    'email':$('#email').val()
+                },
+                success:function(response){
+                   if(response.message){
+                    $('#b1').html('email allready existed')
+                    $("#btn").prop('disabled', true);
+                   }else{
+                    $('#b1').html("")
+                    $("#btn").prop('disabled', false);
+                   }
+                }
+
+
+            })
+
+
+
+        }
+
+
+
+
+       </script>
+
+
+
+
+    </form>
+    
+</body>
+</html>
+
